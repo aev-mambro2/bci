@@ -34,7 +34,7 @@ set myDateTimeRetrievalFormat=yyyyMMdd'T'HHmmss
 
 :getNow
 ::Retrieves the current date-time stamp from the system.
-::Returns a variable "myNow": a string with format: "yyyyMMdd-HHmmss".
+::Returns a variable "myNow": a string with format: "yyyyMMdd'T'HHmmss".
 set myNow=[]
 for /F "tokens=1 delims=" %%q in ('Powershell -Command "& {Get-Date -format "%myDateTimeRetrievalFormat%"}"') do (
   set myNow=%%q
